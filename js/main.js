@@ -1,31 +1,16 @@
-let frog;
-let car;
-let log;
+let canvas = document.getElementById("canvas");
 
-function preload (){
-    img = loadImage('./images/skibidi.png');
-}
-function setup(){
-    createCanvas(500, 500);
-    xPos = 0;
-    yPos = 0;
-}
-function draw(){
-    line(4, 4, 4, 1000);
-}
+let context = canvas.getContext("2d");
 
+var window_height = window.innerHeight;
+var window_width = window.innerWidth;
 
+canvas.width = "1250";
+canvas.height = "580";
+canvas.style.background = "green";
 
-
-
-
-
-
-
-
-
-
-
+context.fillStyle = "gray";
+context.fillRect(0, 500, 1500, 100);
 
 /*const map = [[1, 2, 3],
              [4, 5 ,6], 
@@ -47,4 +32,4 @@ map[2][2] = 'X';
 for(let row of map){
     const rowString = row.join(' ');
     console.log(rowString);
-}
+//}*/
