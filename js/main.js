@@ -3,21 +3,12 @@
 
 // let context = canvas.getContext("2d");
 
-<<<<<<< HEAD
-let window_height = window.innerHeight;
-let window_width = window.innerWidth;
-
-canvas.width = window_width;
-canvas.height = window_height;
-canvas.style.background = "green";
-=======
 // var window_height = window.innerHeight;
 // var window_width = window.innerWidth;
 
 // canvas.width = "windowWidth";
 // canvas.height = "580";
 // canvas.style.background = "green";
->>>>>>> a675aae45948490475026f0e9f3c02ca905fe3c2
 
 // context.fillStyle = "gray";
 // context.fillRect(0, 500, 1500, 100);
@@ -52,15 +43,15 @@ let spriteH = 50;
 let spriteY = 0;
 let spriteX = 0;
 
-
-let= window_width = window.innerWidth;
+let window_height = window.innerHeight;
+let window_width = window.innerWidth;
 
 function preload () {
     sprite  = loadImage("./images/skibidi.png");
 }
  
 function setup () {
-    createCanvas(window_width, 500);
+    createCanvas(1520, 350);
 }
 
 function draw () {
