@@ -38,8 +38,8 @@
 
 
 let sprite;
-let spriteW = 50;
-let spriteH = 50;
+let spriteW = 100;
+let spriteH = 100;
 let spriteY = 0;
 let spriteX = 0;
 
@@ -62,16 +62,16 @@ function draw () {
 
 function keyPressed () {
     if(keyCode === DOWN_ARROW){
-        spriteY += 10;
+        spriteY += 30;
     }
     if(keyCode === UP_ARROW) {
-        spriteY -= 10;
+        spriteY -=  30;
     }
     if(keyCode === RIGHT_ARROW) {
-        spriteX += 10;
+        spriteX +=  30;
     }
     if(keyCode === LEFT_ARROW) {
-        spriteX -= 10;
+        spriteX -=  30;
     }
     
 }
