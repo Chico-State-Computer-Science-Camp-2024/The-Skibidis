@@ -52,10 +52,11 @@ function preload () {
  
 function setup () {
     createCanvas(1520, 515);
+    
 }
 
 function draw () {
-    background(225);
+    background("green");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
 }
 
