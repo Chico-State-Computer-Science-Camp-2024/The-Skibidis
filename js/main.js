@@ -6,7 +6,7 @@ let context = canvas.getContext("2d");
 var window_height = window.innerHeight;
 var window_width = window.innerWidth;
 
-canvas.width = "1250";
+canvas.width = "windowWidth";
 canvas.height = "580";
 canvas.style.background = "green";
 
