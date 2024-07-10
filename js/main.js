@@ -35,7 +35,7 @@ for(let row of map){
     console.log(rowString);
 //}*/
 //Angel's
-//const variableName = document.getElementById("variableName"); 
+const Instructions = document.getElementById("Instructions"); 
 const moveAmount = 10; 
 let x = 0;
 let y = 0;
@@ -57,8 +57,8 @@ document.addEventListener("keydown", event => {
                  break;
         }
         
-        //variableName.style.top = "${y}px";
-        //variableName.style.left = "${x}px";
+        Instructions.style.top = "${y}px";
+        Instructions.style.left = "${x}px";
     }
 });
 
