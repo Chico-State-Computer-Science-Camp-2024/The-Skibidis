@@ -43,12 +43,15 @@ let spriteH = 50;
 let spriteY = 0;
 let spriteX = 0;
 
+
+let= window_width = window.innerWidth;
+
 function preload () {
     sprite  = loadImage("./images/skibidi.png");
 }
  
 function setup () {
-    createCanvas(700, 500);
+    createCanvas(window_width, 500);
 }
 
 function draw () {
