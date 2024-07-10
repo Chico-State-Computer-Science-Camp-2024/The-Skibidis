@@ -55,7 +55,7 @@ function setup () {
 }
 
 function draw () {
-    background(225);
+    background("green");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
 }
 
