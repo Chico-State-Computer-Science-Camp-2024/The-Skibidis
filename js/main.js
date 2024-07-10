@@ -51,8 +51,7 @@ function preload () {
 }
  
 function setup () {
-    createCanvas(1520, 515);
-    
+    createCanvas(window_width-30, 515);
 }
 
 function draw () {
