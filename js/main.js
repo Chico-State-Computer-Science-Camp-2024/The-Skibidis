@@ -3,12 +3,21 @@
 
 // let context = canvas.getContext("2d");
 
+<<<<<<< HEAD
+let window_height = window.innerHeight;
+let window_width = window.innerWidth;
+
+canvas.width = window_width;
+canvas.height = window_height;
+canvas.style.background = "green";
+=======
 // var window_height = window.innerHeight;
 // var window_width = window.innerWidth;
 
 // canvas.width = "windowWidth";
 // canvas.height = "580";
 // canvas.style.background = "green";
+>>>>>>> a675aae45948490475026f0e9f3c02ca905fe3c2
 
 // context.fillStyle = "gray";
 // context.fillRect(0, 500, 1500, 100);
