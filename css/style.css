@@ -1,5 +1,5 @@
-//Angel
-body{
+/* Angel */
+#Instructions{
 display: flex;
 flex-wrap: nowrap;
 justify-content: center;
