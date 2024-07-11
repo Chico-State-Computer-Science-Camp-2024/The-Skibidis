@@ -34,7 +34,7 @@ function setup () {
 
 function draw () {
     // distance = spriteX - enemyX_1;
-    background("green");
+    background("rgb(60, 74, 51)");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
     rectMode(CENTER);
     image(pic, enemyX_1, enemyY_1, 100, 100);
