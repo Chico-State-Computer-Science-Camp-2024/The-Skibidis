@@ -49,12 +49,17 @@ let distance;
 let window_height = window.innerHeight;
 let window_width = window.innerWidth;
 
+let spriteY = 0;
+let spriteX = 0;
+
 function preload () {
     sprite  = loadImage("./images/skibidi.png");
 }
  
 function setup () {
-    createCanvas(window_width-30, 515);
+    createCanvas(window_width-30, window_height-195);
+    noStroke();
+
 }
 
 function draw () {
@@ -86,6 +91,9 @@ function keyPressed () {
     }   
     if(keyCode === LEFT_ARROW) {
         spriteX -=  Math.floor(window.innerWidth/12);
+
     }
     
 }
+
+
