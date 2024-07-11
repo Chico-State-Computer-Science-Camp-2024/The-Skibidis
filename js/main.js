@@ -9,7 +9,6 @@ let enemyX_2 = 600;
 let enemyY_2 = 250;
 let enemyX_3 = 1000;
 let enemyY_3 = 100;
-let distance;
 let enemyY_Speed1 = 8;
 let enemyY_Speed2 = 9;
 let enemyY_Speed3 = 10;
@@ -33,7 +32,6 @@ function setup () {
 }
 
 function draw () {
-    // distance = spriteX - enemyX_1;
     background("green");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
     rectMode(CENTER);
@@ -69,13 +67,6 @@ function draw () {
     }
 }
 
-//     if (distance < 100){ 
-//         spriteX = 0
-//         spriteY = 0
-//     }
-// }
-
-
 function keyPressed () {
     if(keyCode === DOWN_ARROW){
         spriteY += Math.floor(window.innerHeight/7);
@@ -90,4 +81,5 @@ function keyPressed () {
         spriteX -=  Math.floor(window.innerWidth/12);
 
     }
+
 }
