@@ -49,8 +49,7 @@ let distance;
 let window_height = window.innerHeight;
 let window_width = window.innerWidth;
 
-let spriteY = 0;
-let spriteX = 0;
+
 
 function preload () {
     sprite  = loadImage("./images/skibidi.png");
