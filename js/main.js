@@ -9,7 +9,6 @@ let enemyX_2 = 600;
 let enemyY_2 = 250;
 let enemyX_3 = 1000;
 let enemyY_3 = 100;
-let distance;
 let enemyY_Speed1 = 8;
 let enemyY_Speed2 = 9;
 let enemyY_Speed3 = 10;
@@ -33,23 +32,23 @@ function setup () {
 }
 
 function draw () {
-    // distance = spriteX - enemyX_1;
-    background("rgb(60, 74, 51)");
+
+    background("green");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
     rectMode(CENTER);
     image(pic, enemyX_1, enemyY_1, 100, 100);
     image(photo, enemyX_2, enemyY_2, 125, 125);
     image(picture, enemyX_3, enemyY_3, 150, 150);
 
-    if(spriteX+spriteW > enemyX_1 && spriteX < enemyX_1+100 && spriteY+spriteH > enemyY_1-100 && spriteY < enemyY_1+100){
+    if(spriteX+spriteW > enemyX_1 + 100 && spriteX < enemyX_1+100 && spriteY+spriteH > enemyY_1 && spriteY < enemyY_1+100){
         spriteX = 0;
         spriteY = 0;
     }
-    if(spriteX+spriteW > enemyX_2 && spriteX < enemyX_2+125 && spriteY+spriteH > enemyY_2-125 && spriteY < enemyY_2+125){
+    if(spriteX+spriteW > enemyX_2 + 125 && spriteX < enemyX_2+125 && spriteY+spriteH > enemyY_2 && spriteY < enemyY_2+125){
         spriteX = 0;
         spriteY = 0;
     }
-    if(spriteX+spriteW > enemyX_3 && spriteX < enemyX_3+150 && spriteY+spriteH > enemyY_3-150 && spriteY < enemyY_2){
+    if(spriteX+spriteW > enemyX_3 + 150 && spriteX < enemyX_3+150 && spriteY+spriteH > enemyY_3 && spriteY < enemyY_2+150){
         spriteX = 0;
         spriteY = 0;
     }
@@ -69,13 +68,6 @@ function draw () {
     }
 }
 
-//     if (distance < 100){ 
-//         spriteX = 0
-//         spriteY = 0
-//     }
-// }
-
-
 function keyPressed () {
     if(keyCode === DOWN_ARROW){
         spriteY += Math.floor(window.innerHeight/7);
@@ -90,4 +82,5 @@ function keyPressed () {
         spriteX -=  Math.floor(window.innerWidth/12);
 
     }
+
 }
