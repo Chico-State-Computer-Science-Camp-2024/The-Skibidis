@@ -39,15 +39,15 @@ function draw () {
     image(photo, enemyX_2, enemyY_2, 125, 125);
     image(picture, enemyX_3, enemyY_3, 150, 150);
 
-    if(spriteX+spriteW > enemyX_1 && spriteX < enemyX_1+100 && spriteY+spriteH > enemyY_1-100 && spriteY < enemyY_1+100){
+    if(spriteX+spriteW > enemyX_1 + 100 && spriteX < enemyX_1+100 && spriteY+spriteH > enemyY_1 && spriteY < enemyY_1+100){
         spriteX = 0;
         spriteY = 0;
     }
-    if(spriteX+spriteW > enemyX_2 && spriteX < enemyX_2+125 && spriteY+spriteH > enemyY_2-125 && spriteY < enemyY_2+125){
+    if(spriteX+spriteW > enemyX_2 + 125 && spriteX < enemyX_2+125 && spriteY+spriteH > enemyY_2 && spriteY < enemyY_2+125){
         spriteX = 0;
         spriteY = 0;
     }
-    if(spriteX+spriteW > enemyX_3 && spriteX < enemyX_3+150 && spriteY+spriteH > enemyY_3-150 && spriteY < enemyY_2){
+    if(spriteX+spriteW > enemyX_3 + 150 && spriteX < enemyX_3+150 && spriteY+spriteH > enemyY_3 && spriteY < enemyY_2+150){
         spriteX = 0;
         spriteY = 0;
     }
