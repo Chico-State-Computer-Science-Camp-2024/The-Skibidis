@@ -12,6 +12,7 @@ let enemyY_3 = 100;
 let enemyY_Speed1 = 8;
 let enemyY_Speed2 = 9;
 let enemyY_Speed3 = 10;
+let gameState = 'playing';
 
 let window_height = window.innerHeight;
 let window_width = window.innerWidth;
@@ -32,7 +33,7 @@ function setup () {
 }
 
 function draw () {
-
+    if(gameState === 'playing'){
     background("rgb(60, 74, 51)");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
     rectMode(CENTER);
@@ -66,7 +67,22 @@ function draw () {
     if (enemyY_3 > window_height-150 || enemyY_3 < 0) {
     enemyY_Speed3 = enemyY_Speed3 * -1;
     }
+
+    if (playerWins()) {
+        gameState = 'win';
+    }
+
+
+}else if (gameState === 'win'){ 
+    background(255);
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    text('You Win', window_width/2, innerHeight/2);
 }
+}
+function playerWins() {
+    return spriteX >= 1200;
+}   
 
 function keyPressed () {
     if(keyCode === DOWN_ARROW){
