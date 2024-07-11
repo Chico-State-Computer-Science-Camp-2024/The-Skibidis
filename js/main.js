@@ -40,6 +40,11 @@
 let sprite;
 let spriteW = 100;
 let spriteH = 100;
+let spriteY = 0;
+let spriteX = 0;
+let enemyX_1 = 200;
+let enemyY_1 = 350;
+let distance;
 
 let window_height = window.innerHeight;
 let window_width = window.innerWidth;
@@ -58,30 +63,35 @@ function setup () {
 }
 
 function draw () {
+    // distance = spriteX - enemyX_1;
     background("green");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
+    rectMode(CENTER);
+    rect(enemyX_1, enemyY_1, 100, 100);
+    if(spriteX+spriteW > enemyX_1-50 && spriteX < enemyX_1+50 & spriteY+spriteH > enemyY_1-50 && spriteY < enemyY_1+50){
+        spriteX = 0;
+        spriteY = 0;
+    }
+    // if (distance < 100){ 
+    //     spriteX = 0
+    //     spriteY = 0
+    // }
 }
+
 
 function keyPressed () {
     if(keyCode === DOWN_ARROW){
-        if (spriteY < window_height - 200 - spriteH) {
-            spriteY += window.innerHeight/7;
-        }
+        spriteY += Math.floor(window.innerHeight/7);
     }
     if(keyCode === UP_ARROW) {
-        if (spriteY > 0 ) {
-            spriteY -=  window.innerHeight/7;
-        }
+        spriteY -=  Math.floor(window.innerHeight/7);
     }
     if(keyCode === RIGHT_ARROW) {
-        if (spriteX < window_width - 30 - spriteW) {
-            spriteX +=  window.innerWidth/12;
-        }
-    }
+        spriteX +=  Math.floor(window.innerWidth/12);
+    }   
     if(keyCode === LEFT_ARROW) {
-        if (spriteX > 0) {
-            spriteX -=  window.innerWidth/12;
-        }
+        spriteX -=  Math.floor(window.innerWidth/12);
+
     }
     
 }
