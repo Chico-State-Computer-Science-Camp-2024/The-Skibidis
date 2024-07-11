@@ -1,42 +1,3 @@
-// //orlando's
-// let canvas = document.getElementById("canvas");
-
-// let context = canvas.getContext("2d");
-
-// var window_height = window.innerHeight;
-// var window_width = window.innerWidth;
-
-// canvas.width = "windowWidth";
-// canvas.height = "580";
-// canvas.style.background = "green";
-
-// context.fillStyle = "gray";
-// context.fillRect(0, 500, 1500, 100);
-
-// /*const map = [[1, 2, 3],
-//              [4, 5 ,6], 
-//              [7, 8, 9]];
-//              ['*', 0, '#']
-
-// /*map[0][0] = 'X';
-// map[0][1] = 'O';
-// map[0][2] = 'X';
-
-// map[1][0] = 'O';
-// map[1][1] = 'X';
-// map[1][2] = 'O';
-
-// map[2][0] = 'X';
-// map[2][1] = 'O';
-// map[2][2] = 'X';
-
-// for(let row of map){
-//     const rowString = row.join(' ');
-//     console.log(rowString);
-// //}*/
-//Angel's
-
-
 let sprite;
 let spriteW = 100;
 let spriteH = 100;
@@ -44,16 +5,25 @@ let spriteY = 0;
 let spriteX = 0;
 let enemyX_1 = 200;
 let enemyY_1 = 350;
+let enemyX_2 = 600;
+let enemyY_2 = 250;
+let enemyX_3 = 1000;
+let enemyY_3 = 100;
 let distance;
+let enemyY_Speed1 = 8;
+let enemyY_Speed2 = 9;
+let enemyY_Speed3 = 10;
 
 let window_height = window.innerHeight;
 let window_width = window.innerWidth;
 
-let spriteY = 0;
-let spriteX = 0;
+
 
 function preload () {
     sprite  = loadImage("./images/skibidi.png");
+    pic = loadImage("./images/speakerman.jpg");
+    photo = loadImage("./images/tv.jpg");
+    picture = loadImage("./images/camerman.jpg");
 }
  
 function setup () {
@@ -67,16 +37,43 @@ function draw () {
     background("green");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
     rectMode(CENTER);
-    rect(enemyX_1, enemyY_1, 100, 100);
-    if(spriteX+spriteW > enemyX_1-50 && spriteX < enemyX_1+50 & spriteY+spriteH > enemyY_1-50 && spriteY < enemyY_1+50){
+    image(pic, enemyX_1, enemyY_1, 100, 100);
+    image(photo, enemyX_2, enemyY_2, 125, 125);
+    image(picture, enemyX_3, enemyY_3, 150, 150);
+
+    if(spriteX+spriteW > enemyX_1 && spriteX < enemyX_1+100 && spriteY+spriteH > enemyY_1-100 && spriteY < enemyY_1+100){
         spriteX = 0;
         spriteY = 0;
     }
-    // if (distance < 100){ 
-    //     spriteX = 0
-    //     spriteY = 0
-    // }
+    if(spriteX+spriteW > enemyX_2 && spriteX < enemyX_2+125 && spriteY+spriteH > enemyY_2-125 && spriteY < enemyY_2+125){
+        spriteX = 0;
+        spriteY = 0;
+    }
+    if(spriteX+spriteW > enemyX_3 && spriteX < enemyX_3+150 && spriteY+spriteH > enemyY_3-150 && spriteY < enemyY_2){
+        spriteX = 0;
+        spriteY = 0;
+    }
+
+    enemyY_1 += enemyY_Speed1;
+    if (enemyY_1 > window_height-100 || enemyY_1 < 0) {
+    enemyY_Speed1 = enemyY_Speed1 * -1;
+    }
+
+    enemyY_2 -= enemyY_Speed2;
+    if (enemyY_2 > window_height-125 || enemyY_2 < 0) {
+    enemyY_Speed2 = enemyY_Speed2 * -1;
+    }
+    enemyY_3 += enemyY_Speed3;
+    if (enemyY_3 > window_height-150 || enemyY_3 < 0) {
+    enemyY_Speed3 = enemyY_Speed3 * -1;
+    }
 }
+
+//     if (distance < 100){ 
+//         spriteX = 0
+//         spriteY = 0
+//     }
+// }
 
 
 function keyPressed () {
@@ -93,7 +90,4 @@ function keyPressed () {
         spriteX -=  Math.floor(window.innerWidth/12);
 
     }
-    
 }
-
-
