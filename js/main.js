@@ -42,12 +42,18 @@ let spriteW = 100;
 let spriteH = 100;
 let spriteY = 0;
 let spriteX = 0;
+let enemyX_1;
+let enemyY_1;
+let enemyX_2;
+let enemyY_2;
 
 let window_height = window.innerHeight;
 let window_width = window.innerWidth;
 
+
 function preload () {
     sprite  = loadImage("./images/skibidi.png");
+    //imageMode(center);
 }
  
 function setup () {
