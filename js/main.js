@@ -61,16 +61,16 @@ function draw () {
 
 function keyPressed () {
     if(keyCode === DOWN_ARROW){
-        spriteY += 30;
+        spriteY += window.innerHeight/7;
     }
     if(keyCode === UP_ARROW) {
-        spriteY -=  30;
+        spriteY -=  window.innerHeight/7;
     }
     if(keyCode === RIGHT_ARROW) {
-        spriteX +=  30;
+        spriteX +=  window.innerWidth/12;
     }
     if(keyCode === LEFT_ARROW) {
-        spriteX -=  30;
+        spriteX -=  window.innerWidth/12;
     }
     
 }
