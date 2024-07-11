@@ -40,18 +40,21 @@
 let sprite;
 let spriteW = 100;
 let spriteH = 100;
-let spriteY = 0;
-let spriteX = 0;
 
 let window_height = window.innerHeight;
 let window_width = window.innerWidth;
+
+let spriteY = 0;
+let spriteX = 0;
 
 function preload () {
     sprite  = loadImage("./images/skibidi.png");
 }
  
 function setup () {
-    createCanvas(window_width-30, 515);
+    createCanvas(window_width-30, window_height-195);
+    noStroke();
+
 }
 
 function draw () {
@@ -61,16 +64,26 @@ function draw () {
 
 function keyPressed () {
     if(keyCode === DOWN_ARROW){
-        spriteY += window.innerHeight/7;
+        if (spriteY < window_height - 200 - spriteH) {
+            spriteY += window.innerHeight/7;
+        }
     }
     if(keyCode === UP_ARROW) {
-        spriteY -=  window.innerHeight/7;
+        if (spriteY > 0 ) {
+            spriteY -=  window.innerHeight/7;
+        }
     }
     if(keyCode === RIGHT_ARROW) {
-        spriteX +=  window.innerWidth/12;
+        if (spriteX < window_width - 30 - spriteW) {
+            spriteX +=  window.innerWidth/12;
+        }
     }
     if(keyCode === LEFT_ARROW) {
-        spriteX -=  window.innerWidth/12;
+        if (spriteX > 0) {
+            spriteX -=  window.innerWidth/12;
+        }
     }
     
 }
+
+
