@@ -32,6 +32,7 @@ function setup () {
 }
 
 function draw () {
+
     background("green");
     image(sprite, spriteX, spriteY, spriteW, spriteH);
     rectMode(CENTER);
