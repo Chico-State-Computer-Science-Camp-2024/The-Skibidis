@@ -14,7 +14,7 @@ let enemyY_Speed2 = 9;
 let enemyY_Speed3 = 10;
 let gameState = 'playing';
 
-let window_height = window.innerHeight;
+let window_height = window.innerHeight - 70;
 let window_width = window.innerWidth;
 
 
